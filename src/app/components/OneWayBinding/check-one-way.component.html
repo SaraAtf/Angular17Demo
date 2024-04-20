@@ -1,0 +1,15 @@
+<div class="bg-dark p-5 text-center text-light">
+  <h1 class="text-warning">{{ title }}</h1>
+  <div class="container">
+    <img [src]="imgSrc1" alt="" />
+    <div class="mt-4">
+      <input
+        (input)="getInputValue($event)"
+        type="text"
+        class="form-control"
+        placeholder="Enter Your Data"
+      />
+      <p class="lead fs-3 mt-4 text-warning">Result : {{ inputValue }}</p>
+    </div>
+  </div>
+</div>

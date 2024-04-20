@@ -1,0 +1,7 @@
+<div class="bg-dark p-5 text-light">
+  <h1 class="text-center mb-5 text-warning">Parent Component</h1>
+  <p>{{ secondData }}</p>
+  <app-first [first]="parentData"></app-first>
+  <app-first [first]="parentData"></app-first>
+  <app-second (myEvent)="getData($event)"></app-second>
+</div>
