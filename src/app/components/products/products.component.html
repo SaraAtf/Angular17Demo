@@ -1,0 +1,40 @@
+<div class="p-5 mt-5">
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(product of products; track product.id){
+
+        <tr>
+          <th scope="row">{{ product.id }}</th>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price | currency }}</td>
+          <td>{{ product.quantity }}</td>
+          <td>
+            <i
+              [routerLink]="['/product', product.id]"
+              class="fs-2 mx-2 text-warning bi bi-eye"
+            ></i>
+            <i
+              [routerLink]="['/product', 'edit', product.id]"
+              class="fs-2 mx-2 text-info bi bi-pencil-square"
+            ></i>
+            <i
+              (click)="deleteProduct(product.id)"
+              class="fs-2 mx-2 text-danger bi bi-trash3-fill"
+            ></i>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
