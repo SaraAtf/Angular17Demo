@@ -1,1 +1,43 @@
-<p>product-form works!</p>
+<div class="container mt-5">
+  <form (submit)="productHandler()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Product Name</label>
+      <input
+        type="text"
+        name="productName"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="textHelp"
+        placeholder="Enter Product Name"
+        [(ngModel)]="productName"
+      />
+      <div id="textHelp" class="form-text">
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">quantity</label>
+      <input
+        type="number"
+        name="price"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Enter Product quantity"
+        [(ngModel)]="price"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">price</label>
+      <input
+        type="number"
+        name="quantity"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Enter Product price"
+        [(ngModel)]="quantity"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Products</button>
+  </form>
+</div>
